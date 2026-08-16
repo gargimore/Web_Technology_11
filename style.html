@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+
+    <style>
+        body {
+            background-color: lightpink;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: purple;
+        }
+
+        form {
+            background-color: white;
+            border: 2px solid violet;
+            border-radius: 15px;
+            padding: 30px;
+            width: 350px;
+            margin: 50px auto;
+        }
+
+        .form1 {
+            color: purple;
+            font-weight: bold;
+        }
+
+        input {
+            background-color: lavender;
+            border: 1px solid violet;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .button {
+            background-color: purple;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: violet;
+        }
+
+        input[type="submit"]:last-child {
+            background-color: pink;
+            color: purple;
+            border: 1px solid violet;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>STUDENT REGISTRATION FORM</h1>
+
+    <form>
+
+        <label class="form1" for="name">Full Name</label><br>
+        <input type="text" id="name"><br><br>
+
+        <label class="form1" for="email">Email</label><br>
+        <input type="email" id="email"><br><br>
+
+        <label class="form1" for="password">Password</label><br>
+        <input type="password" id="password"><br><br>
+
+        <label class="form1" for="phone">Phone Number</label><br>
+        <input type="text" id="phone"><br><br>
+
+        <input class="button" type="submit" value="Register">
+        <input type="submit" value="Back">
+
+    </form>
+
+</body>
+</html>
