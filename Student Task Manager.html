@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager</title>
+    <link rel="stylesheet" href="./Student Task Manager_files/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Student Task Manager</h1>
+        <p class="subtitle">Manage your study tasks easily!</p>
+
+        <form id="taskForm">
+            <input type="text" id="taskInput" placeholder="Enter your task..." required="">
+            <button type="submit">Add Task</button>
+        </form>
+
+        <div class="filters">
+            <button type="button" data-filter="all">All Tasks</button>
+            <button type="button" data-filter="pending">Pending</button>
+            <button type="button" data-filter="completed">Completed</button>
+        </div>
+
+        <div class="stats">
+            <div>
+                <h3 id="totalCount">0</h3>
+                <p>Total Tasks</p>
+            </div>
+
+            <div>
+                <h3 id="pendingCount">0</h3>
+                <p>Pending</p>
+            </div>
+
+            <div>
+                <h3 id="completedCount">0</h3>
+                <p>Completed</p>
+            </div>
+        </div>
+
+        <h2>My Tasks</h2>
+        <ul id="taskList"></ul>
+
+        <p id="emptyMessage" style="display: block;">No tasks yet. Add your first task!</p>
+
+        <button type="button" id="loadSample">
+            Load Sample Tasks from API
+        </button>
+
+        <p id="message" role="status"></p>
+    </div>
+
+    <script src="./Student Task Manager_files/script.js.download"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
