@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudy — Weather App</title>
+    <link rel="stylesheet" href="./Cloudy — Weather App_files/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Cloudy — Weather App_files/css2" rel="stylesheet">
+</head>
+<body>
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+
+    <main class="app-wrapper">
+        <header class="topbar">
+            <div class="brand">
+                <span class="brand-icon">☁</span>
+                <span>cloudy<span class="brand-dot">.</span></span>
+            </div>
+            <span class="live-badge">
+                <span class="live-dot"></span> LIVE WEATHER
+            </span>
+        </header>
+
+        <section class="hero">
+            <p class="eyebrow">YOUR PERSONAL WEATHER SPACE</p>
+            <h1>Feel the <span>forecast.</span></h1>
+            <p class="subtitle">
+                A little sunshine, a little rain —<br>
+                discover what's happening outside.
+            </p>
+        </section>
+
+        <section class="weather-card">
+            <div class="card-top">
+                <div>
+                    <p class="section-label">EXPLORE YOUR CITY</p>
+                    <h2>Weather today <span>✦</span></h2>
+                </div>
+                <div class="sun-decoration">☀</div>
+            </div>
+
+            <form id="weatherForm" class="search-box">
+                <span class="search-icon">⌕</span>
+                <input type="text" id="cityInput" placeholder="Enter a city, e.g. Nagpur" autocomplete="off">
+                <button type="submit" id="searchButton">Search ↗</button>
+            </form>
+
+            <p class="search-hint">✦ Try Mumbai, Delhi, Pune or Nagpur</p>
+
+            <div id="weatherResult" aria-live="polite"><section class="weather-output"><div class="weather-main"><p class="location-tag">✦ YOUR CITY</p><h3>Nagpur</h3><div class="weather-icon">☀️</div><p class="temperature">31.9 <span>°C</span></p><p class="condition">Clear sky</p><p class="condition">India</p></div><div class="weather-stats"><div class="stat-card"><div class="stat-icon">💧</div><p class="stat-label">HUMIDITY</p><p class="stat-value">26%</p></div><div class="stat-card"><div class="stat-icon">💨</div><p class="stat-label">WIND SPEED</p><p class="stat-value">6.2 km/h</p></div><div class="stat-card"><div class="stat-icon">🌡️</div><p class="stat-label">TEMPERATURE</p><p class="stat-value">31.9 °C</p></div></div><p class="weather-code">Open-Meteo weather code: 0</p></section></div>
+        </section>
+
+        <footer>
+            <span>MADE WITH <span class="heart">♥</span> &amp; A LITTLE SUNSHINE</span>
+            <span>POWERED BY OPEN-METEO</span>
+        </footer>
+    </main>
+
+    <script src="./Cloudy — Weather App_files/script.js.download"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
